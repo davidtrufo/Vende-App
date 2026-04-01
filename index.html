@@ -152,7 +152,9 @@ textarea { resize: vertical; min-height: 52px; }
   </div>
   <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
 </header>
-
+<div style="background: rgba(63,185,80,0.08); border: 1px solid rgba(63,185,80,0.3); padding: 10px 16px; font-size: 12px; text-align: center;">
+✔ Baseado na Central de Ajuda oficial do Projuris ADV · Processos reais de implantação · Boas práticas validadas
+</div>
 <div class="main">
   <div class="input-panel">
     <div class="section-label">📥 Configurar situação da call</div>
@@ -199,6 +201,8 @@ textarea { resize: vertical; min-height: 52px; }
           </optgroup>
         </select>
       </div>
+     
+</div>
       <div class="field">
         <label>Tamanho do escritório</label>
         <select id="size">
@@ -217,6 +221,28 @@ textarea { resize: vertical; min-height: 52px; }
         </select>
       </div>
     </div>
+     <div style="margin-top:15px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+
+<div style="background:#1c2333; padding:12px; border-radius:8px; border-left:3px solid #3fb950;">
+<strong>🔄 Migração segura</strong><br>
+Importação via planilha, OAB ou integração. Sem perda de dados e com validação.
+</div>
+
+<div style="background:#1c2333; padding:12px; border-radius:8px; border-left:3px solid #388bfd;">
+<strong>⏱ Implantação rápida</strong><br>
+Setup guiado com apoio e ganho de produtividade desde os primeiros dias.
+</div>
+
+<div style="background:#1c2333; padding:12px; border-radius:8px; border-left:3px solid #8b5cf6;">
+<strong>👥 Adoção fácil</strong><br>
+Interface simples + Central de Ajuda + suporte contínuo para o time.
+</div>
+
+<div style="background:#1c2333; padding:12px; border-radius:8px; border-left:3px solid #f85149;">
+<strong>🔒 Segurança e suporte</strong><br>
+Controle de acesso, auditoria e suporte ativo sempre disponível.
+</div>
+
     <div class="field">
       <label>Contexto adicional (opcional — dor mapeada, nome, detalhe relevante)</label>
       <textarea id="context" placeholder="Ex: Escritório de família, 3 advogados, perdeu prazo no mês passado, nunca usou software, sócio está na call..."></textarea>
@@ -230,11 +256,24 @@ textarea { resize: vertical; min-height: 52px; }
   </div>
 
   <div class="results" id="results">
-    <div class="status-bar" id="statusBar"></div>
-    <div id="nextBar"></div>
-    <div class="tri" id="triGrid"></div>
-    <div class="bot" id="botGrid"></div>
+    <div style="background: rgba(31,111,235,0.08); border:1px solid rgba(56,139,253,0.3); padding:14px; border-radius:10px; margin-bottom:12px;">
+  <strong>💡 Direcionamento estratégico:</strong><br><br>
+
+  Se a dúvida for sobre migração: explique que existem processos estruturados de importação e validação.<br><br>
+
+  Se for tempo: mostre que o sistema gera ganho rápido ao reduzir tarefas manuais.<br><br>
+
+  Se for adesão: destaque a simplicidade e a central de ajuda com passo a passo.<br><br>
+
+  Se for segurança: reforce controle de acessos, auditoria e estabilidade do sistema.
+
   </div>
+
+  <div class="status-bar" id="statusBar"></div>
+  <div id="nextBar"></div>
+  <div class="tri" id="triGrid"></div>
+  <div class="bot" id="botGrid"></div>
+
 </div>
 
 <script>
