@@ -558,6 +558,79 @@ function render(obj,size){
 
   document.getElementById('results').className='results visible';
   document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+  // ===== UPGRADE: ARGUMENTAÇÃO + CONHECIMENTO =====
+const KNOWLEDGE_ENGINE = {
+  caro: {
+    problema: "O cliente não enxergou valor suficiente para justificar o investimento.",
+    argumento: "Hoje, escritórios perdem horas operacionais com controle manual. Isso custa mais do que o próprio sistema.",
+    quebra: "Não é sobre custo, é sobre quanto você está deixando de ganhar e o risco que continua correndo sem controle."
+  },
+  planilha: {
+    problema: "Controle manual depende de pessoas e falha sob pressão.",
+    argumento: "Planilhas não têm automação de prazos nem segurança operacional.",
+    quebra: "Funciona até dar errado — e quando dá errado, o custo é muito maior que qualquer sistema."
+  },
+  socio: {
+    problema: "O decisor não foi impactado com clareza.",
+    argumento: "Sem ROI claro, qualquer investimento trava na validação interna.",
+    quebra: "Se seu sócio enxergar o impacto financeiro e operacional, a decisão deixa de ser opinião e vira lógica."
+  },
+  migracao: {
+    problema: "Medo da transição e risco operacional.",
+    argumento: "A migração é assistida e não exige parada do escritório.",
+    quebra: "O risco maior não está em mudar, está em continuar com um sistema que já tem falhas."
+  },
+  medo_equipe: {
+    problema: "Receio de baixa adesão da equipe.",
+    argumento: "Sistemas bem implementados reduzem trabalho, não aumentam.",
+    quebra: "Quando a equipe percebe ganho de tempo, a adesão acontece naturalmente."
+  },
+  medo_dados: {
+    problema: "Insegurança com dados sensíveis.",
+    argumento: "O sistema possui controle de acesso, backup e padrões de segurança.",
+    quebra: "Hoje seus dados já estão expostos — só que sem controle e rastreabilidade."
+  },
+  analisar_geral: {
+    problema: "Falta de clareza para decidir.",
+    argumento: "Quanto mais tempo sem decidir, maior o acúmulo de problema.",
+    quebra: "Você não está evitando decisão — está adiando o problema."
+  }
+};
+
+(function(){
+  const target = document.getElementById("botGrid");
+  if(!target) return;
+
+  const k = KNOWLEDGE_ENGINE[obj];
+  if(!k) return;
+
+  target.innerHTML += `
+    <div class="panel">
+      <div class="ph">
+        <div class="pi" style="background:rgba(139,92,246,0.16)">🧠</div>
+        <div>
+          <div class="pt">Argumentação Estratégica</div>
+          <div class="ps">Como quebrar essa objeção</div>
+        </div>
+      </div>
+
+      <div class="diag-box">
+        <strong>O que está por trás:</strong><br>
+        ${k.problema}
+      </div>
+
+      <div class="diag-box">
+        <strong>Argumento técnico:</strong><br>
+        ${k.argumento}
+      </div>
+
+      <div class="diag-box">
+        <strong>Como responder:</strong><br>
+        ${k.quebra}
+      </div>
+    </div>
+  `;
+})();
 }
 </script>
 </body>
