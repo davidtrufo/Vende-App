@@ -559,6 +559,96 @@ function render(obj,size){
   document.getElementById('results').className='results visible';
   document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
 }
+  <script>
+// ===== BASE DE CONHECIMENTO PROJURIS =====
+const KNOWLEDGE_BASE = {
+  prazos: {
+    argumento: "O Projuris automatiza a captura de intimações e controle de prazos.",
+    prova: "A plataforma elimina a necessidade de consultas manuais e reduz risco operacional.",
+    aplicacao: "Na prática, você evita perda de prazo e reduz dependência de controle manual."
+  },
+  produtividade: {
+    argumento: "O sistema reduz tarefas operacionais e organiza o fluxo do escritório.",
+    prova: "Centraliza informações, tarefas e processos em um único ambiente.",
+    aplicacao: "Sua equipe ganha tempo e consegue focar em atividades estratégicas."
+  },
+  gestao: {
+    argumento: "O Projuris centraliza a gestão de processos e atividades.",
+    prova: "Permite acompanhar prazos, tarefas e andamento em tempo real.",
+    aplicacao: "Você passa a ter controle total da operação sem depender de planilhas."
+  },
+  migracao: {
+    argumento: "A migração é assistida e estruturada pelo time de implantação.",
+    prova: "Os dados são transferidos sem interromper a operação do escritório.",
+    aplicacao: "Você consegue evoluir de sistema sem risco de perda de informação."
+  },
+  seguranca: {
+    argumento: "Os dados ficam centralizados e protegidos em ambiente seguro.",
+    prova: "A plataforma segue boas práticas de segurança e controle de acesso.",
+    aplicacao: "Você reduz risco de perda de dados e acessos indevidos."
+  },
+  roi: {
+    argumento: "O investimento se paga com ganho de produtividade e redução de risco.",
+    prova: "Menos tempo operacional e menos falhas impactam diretamente no resultado.",
+    aplicacao: "Você transforma custo em eficiência e previsibilidade."
+  }
+};
+
+// ===== MAPA DE OBJEÇÕES =====
+const OBJECTION_MAP = {
+  planilha: ["prazos", "produtividade"],
+  caro: ["roi", "produtividade"],
+  migracao: ["migracao", "seguranca"],
+  necessidade: ["produtividade", "gestao"],
+  socio: ["gestao", "roi"],
+  analisar: ["roi"],
+};
+
+// ===== GERADOR DE RESPOSTA =====
+function gerarRespostaAvancada(objectionKey) {
+  const temas = OBJECTION_MAP[objectionKey] || [];
+  
+  let resposta = "";
+
+  temas.forEach(tema => {
+    const bloco = KNOWLEDGE_BASE[tema];
+    if (bloco) {
+      resposta += `
+      <div style="margin-bottom:12px;">
+        <strong>🧠 Argumento:</strong><br>${bloco.argumento}<br><br>
+        <strong>🔍 Prova:</strong><br>${bloco.prova}<br><br>
+        <strong>🎯 Aplicação:</strong><br>${bloco.aplicacao}
+      </div>
+      `;
+    }
+  });
+
+  return resposta;
+}
+
+// ===== INTEGRAÇÃO COM SEU APP =====
+// CHAME ISSO dentro da sua função analyze()
+
+function aplicarConteudoTecnico(objectionKey) {
+  const container = document.getElementById("triGrid"); // ou outro ID do seu resultado
+  const conteudo = gerarRespostaAvancada(objectionKey);
+
+  if (container) {
+    container.innerHTML += `
+      <div class="panel">
+        <div class="ph">
+          <div class="pi">📚</div>
+          <div>
+            <div class="pt">Base Técnica Projuris</div>
+            <div class="ps">Argumentação com prova real do produto</div>
+          </div>
+        </div>
+        ${conteudo}
+      </div>
+    `;
+  }
+}
+</script>
 </script>
 </body>
 </html>
